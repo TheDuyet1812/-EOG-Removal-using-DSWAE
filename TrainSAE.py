@@ -55,7 +55,7 @@ def training_SAE(traindata_loc):
     now = datetime.datetime.now()
 #    matfile = '_'.join([str(layer.nNode) for layer in encoder.layers]) + now.strftime('_%m-%d-%YT%H%M') + '.mat'
     matfile='my_model.mat'
-    scipy.io.savemat('.\\models\\' + matfile, {
+    scipy.io.savemat(os.path.join('models', matfile), {
         'rho': encoder.rho,
         'lamda': encoder.lamda,
         'beta': encoder.beta,
