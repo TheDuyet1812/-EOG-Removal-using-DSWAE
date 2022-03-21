@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 import numpy
 import scipy.io
-
+import os
 from SAE import SAE
 from utility import haarDecompose, haarReconstruct, visualize
 
