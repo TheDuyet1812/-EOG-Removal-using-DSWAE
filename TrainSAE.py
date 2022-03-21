@@ -10,6 +10,7 @@ from utility import haarDecompose, LEVEL, NOL, gamma, ADDITIONAL_LENGTH
 #shuffle the data for what?
 def loadData(filename):
     path =  os.path.join('data_EOG', filename)
+    print(path)
     data = scipy.io.loadmat(path)['data_train']
     indexes = [x for x in range(data.shape[1])]
     random.shuffle(indexes)
