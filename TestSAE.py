@@ -7,7 +7,7 @@ from utility import haarDecompose, haarReconstruct, visualize
 
 
 def loadModel(filename):
-    path = '.\\models\\' + filename
+    path = os.path.join('models', filename)
     tmp = scipy.io.loadmat(path)
 
     tmp['rho'] = tmp['rho'][0].tolist()[0]
@@ -24,7 +24,7 @@ def loadModel(filename):
 
 
 def loadTestData(filename):
-    path = '.\\data_EOG\\'+filename
+    path = os.path.join('data_EOG', filename)
     tmp = scipy.io.loadmat(path)
     return tmp['segments'], tmp['EOGs'], tmp['data_test'], tmp['oriSegments']
 
